@@ -7,20 +7,22 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Button, Alert, Image, Dimensions } from 'react-native';
+import {Platform, StyleSheet, Text, View, Button, Alert, Image, Dimensions, TouchableHighlight } from 'react-native';
 
 import { SearchBar } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesome, { Icons } from 'react-native-fontawesome';
 // import  {Ionicons, FontAwesome} from '@expo/vector-icons'
+import { withNavigation } from 'react-navigation';
 
 import Carousel from 'react-native-banner-carousel';
+
 
 
 const tintColor = 'white';
 
 // const BannerWidth = Dimensions.get('window').width;
-const BannerHeight =   100;
+const BannerHeight =   75;
 const BannerWidth =   280;
 
 const images = [
@@ -53,21 +55,49 @@ const images = [
           clearIcon={{name: 'search'}}
           />
                {/* <Button title="Go to " onPress={() => this.props.navigation.navigate('Details')}></Button> */}
-  
-             <View >
-              <View style={{ flexDirection: 'row', marginTop:-70}}>
-              
-                 <Text style={styles.registercattle}>  <Image source={ require('../../asset/images/registercattle.png')} /> {"\n"}{"\n"}{"\n"} Register cattle</Text>
-                 <Text style={styles.registersir}>  <Image source={ require('../../asset/images/registersire.png')}/> {"\n"}{"\n"}{"\n"} Register Sire</Text>
-              </View>
-  
-              <View style={{ flexDirection: 'row', marginTop:-80}}>
-                <Text style={styles.cattlesummary}> <Image source={ require('../../asset/images/cattlesummary.png')}/> {"\n"}{"\n"}{"\n"} Cattle Summary</Text>
-                 <Text style={styles.activitylog}>  <Image source={ require('../../asset/images/activitylog.png')}/> {"\n"}{"\n"}{"\n"} Activity Log</Text>
-              </View>
+
+              <View >
+                <View style={{backgroundColor:'#F5FCFF' }}>
+                
+                  <View style={{flexDirection:'row',  marginTop: -36}}>
+                      <View style={styles.registercattle}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Registercattle')}>
+                          <Image style={styles.imagestyle} source={require('../../asset/images/registercattle.png')} />
+                        </TouchableHighlight>
+                           <Text style={styles.registertext}> Register cattles</Text>
+                      </View>
+
+                    <View style={styles.registersire}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Registersire')}>
+                          <Image style={styles.imagestyle} source={require('../../asset/images/registersire.png')} />
+                        </TouchableHighlight>  
+                           <Text style={styles.registertext}> Register Sire</Text>
+                      </View>
+
+                  </View>
+                   
+                  <View style={{flexDirection:'row', marginTop: -85}}>
+                      <View style={styles.cattlesummary}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Cattlesummary')}>
+                          <Image style={styles.imagestyle} source={require('../../asset/images/cattlesummary.png')} />
+                        </TouchableHighlight>  
+                           <Text style={styles.registertext}>  Cattle Summary</Text>
+                      </View>
+
+                      <View style={styles.activitylog}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('Activitylog')}>
+                          <Image style={styles.imagestyle} source={require('../../asset/images/activitylog.png')} />
+                        </TouchableHighlight> 
+                          <Text style={styles.registertext}> Activity Log</Text>
+                      </View>
+
+                  </View>
+        
+                </View>
+
              </View>
 
-             
+
              <View style={styles.banner}>
                 <Carousel
                     autoplay
@@ -80,19 +110,9 @@ const images = [
                 </Carousel>
             </View>
 
-             {/* <View >
-              <View style={{ flexDirection: 'row'}}>
-            
-                  <Image style={styles.registercattle} source={ require('../../asset/images/registercattle.png')} />    <Text> Register cattle</Text>
-                   <Image style={styles.registersir} source={ require('../../asset/images/registersire.png')}/> 
-              </View>
-  
-              <View style={{ flexDirection: 'row'}}>
-                  <Image style={styles.cattlesummary} source={ require('../../asset/images/cattlesummary.png')}/>
-                  <Image style={styles.activitylog} source={ require('../../asset/images/activitylog.png')}/> 
-              </View>
-             </View> */}
-           
+              <View style={{flexDirection: 'row', justifyContent:'center', backgroundColor:'#F5FCFF'}}>
+              <Image source={ require('../../asset/images/home.png')}></Image>  
+              </View>         
 
         </View>
       );
@@ -104,10 +124,10 @@ const images = [
       flex: 1,
       // justifyContent: 'center',
       // alignItems: 'center',
-      backgroundColor: '#F5FCFF',
+      backgroundColor:  '#f2f2f2'  //'#F5FCFF',
     },
     searchBarInput: {
-      // color: tintColor,
+      color: tintColor,
       backgroundColor: '#fff',
       marginLeft: 10,
       marginRight: 10,
@@ -117,34 +137,41 @@ const images = [
     //  All Registration screens
     registercattle: {
       margin: 50,
-      fontSize: 10,
       textAlign: 'center',
     },
-    registersir: {
+    registersire: {
       margin: 50,
-      fontSize: 10,
       textAlign: 'center',
     },
     cattlesummary: {
-      margin: 50,
-      fontSize: 10,
+      marginTop: 50,
+      marginLeft: 50,
+      marginRight: 50,
+      marginBottom: 15,
       textAlign: 'center',
     },
     activitylog: {
-      margin: 50,
-      fontSize: 10,
+      marginTop: 50,
+      marginLeft: 50,
+      marginRight: 50,
+      marginBottom: 15,
       textAlign: 'center',
+    },
+    registertext : {
+      fontSize: 10,
+      color: 'grey'
     },
     //
    
     banner: {
       flex: 1,
-      backgroundColor: '#fff',
+      flexDirection: 'row',
+      backgroundColor: '#F5FCFF',
       justifyContent: 'center',
-      marginLeft:40,
-      marginRight: 80,
-      marginTop: -50
+      // marginLeft:40,  
+      // marginRight: 80,
+      marginBottom: 15,
   },
 
   });
-export default Registration;
+export default withNavigation(Registration);

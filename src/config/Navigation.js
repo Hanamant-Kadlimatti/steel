@@ -4,10 +4,16 @@ import {Platform, StyleSheet, Text, View, Image} from 'react-native';
 import {createMaterialTopTabNavigator } from 'react-navigation';
 
 
+
 import Breed from '../containers/breed/Breed';
 import Health from '../containers/health/Health';
 import Nutrition from '../containers/nutrition/Nutrition';
 import Registration from '../containers/registration/Registration';
+
+// import Registercattle from '../containers/registration/registercattle/Registercattle'
+// import Registersire from '../containers/registration/registersire/Registersire'
+// import Cattlesummary from '../containers/registration/cattlesummary/Cattlesummary'
+// import Activitylog from '../containers/registration/activitylog/Activitylog'
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesome, { Icons } from "react-native-fontawesome";
