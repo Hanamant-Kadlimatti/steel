@@ -18,6 +18,8 @@ import Registersire from    './src/containers/registration/registersire/Register
 import Cattlesummary from   './src/containers/registration/cattlesummary/Cattlesummary'
 import Activitylog from    './src/containers/registration/activitylog/Activitylog'
 
+import BreedInformation from    './src/containers/registration/registercattle/BreedInformation'
+
 
 const RootStack = createStackNavigator(
   {
@@ -56,6 +58,15 @@ const RootStack = createStackNavigator(
     Registersire: {screen : Registersire,
       navigationOptions: ({navigation}) => ({
         title: 'Register Sire',
+        headerTintColor: 'white',
+        headerStyle: { backgroundColor: '#212121'},
+      })
+    },
+
+    //
+    BreedInformation: {screen : BreedInformation,
+      navigationOptions: ({navigation}) => ({
+        title: 'Cattle Registration',
         headerTintColor: 'white',
         headerStyle: { backgroundColor: '#212121'},
       })
