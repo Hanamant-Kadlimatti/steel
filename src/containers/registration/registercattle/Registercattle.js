@@ -20,13 +20,13 @@ export default class Registercattle extends Component<Props> {
         data: [
             {
                 label: 'Farm Bred',
-                color: 'green',
-                size: 15,
+                color: '#009688',
+                size: 14,
             },
             {
                 label: 'Purchase',
-                color: 'green',
-                size: 15,
+                color: '#009688',
+                size: 14,
             },
          
         ],

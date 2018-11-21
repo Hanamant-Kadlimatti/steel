@@ -13,12 +13,14 @@ import {createStackNavigator} from 'react-navigation';
 
 import MyTabs from './src/config/Navigation'
 
-import Registercattle from  './src/containers/registration/registercattle/Registercattle'
-import Registersire from    './src/containers/registration/registersire/Registersire'
-import Cattlesummary from   './src/containers/registration/cattlesummary/Cattlesummary'
-import Activitylog from    './src/containers/registration/activitylog/Activitylog'
+import Registercattle from  './src/containers/registration/registercattle/Registercattle';
+import Registersire from    './src/containers/registration/registersire/Registersire';
+import Cattlesummary from   './src/containers/registration/cattlesummary/Cattlesummary';
+import Activitylog from    './src/containers/registration/activitylog/Activitylog';
 
-import BreedInformation from    './src/containers/registration/registercattle/BreedInformation'
+import BreedInformation from    './src/containers/registration/registercattle/BreedInformation' ; 
+import BreedInformations from    './src/containers/registration/registercattle/BreedInformations';
+import BreedInformation1 from    './src/containers/registration/registercattle/BreedInformation1';
 
 
 const RootStack = createStackNavigator(
@@ -71,6 +73,23 @@ const RootStack = createStackNavigator(
         headerStyle: { backgroundColor: '#212121'},
       })
     },
+
+    BreedInformations: {screen : BreedInformations,
+      navigationOptions: ({navigation}) => ({
+        title: 'Cattle Registration',
+        headerTintColor: 'white',
+        headerStyle: { backgroundColor: '#212121'},
+      })
+    },
+
+    BreedInformation1: {screen : BreedInformation1,
+      navigationOptions: ({navigation}) => ({
+        title: 'Cattle Registration',
+        headerTintColor: 'white',
+        headerStyle: { backgroundColor: '#212121'},
+      })
+    },
+
   },
   {
     initialRouteName: 'Home',
