@@ -59,7 +59,7 @@ export default class BreedInformation extends Component<Props> {
           <View style={{flexDirection:'row',  margin: 15,}}>
        <DatePicker
                 style={{width: 80}}
-                dateal={this.state.dateal}
+                date={this.state.dateal}
                 mode="date"
                 placeholder="Al Date Done"
                 format="DD-MM-YYYY"
@@ -108,7 +108,7 @@ export default class BreedInformation extends Component<Props> {
 
              <DatePicker
                 style={{width: 100}}
-                datepd={this.state.datepd}
+                date={this.state.datepd}
                 mode="date"
                 placeholder="PD Check Date"
                 format="DD-MM-YYYY"
@@ -142,7 +142,7 @@ export default class BreedInformation extends Component<Props> {
 
         <View style={styles.pregnancyal}>
           <Text style={styles.pregnancydaystext}>Pregnancy Days</Text>
-              <Picker style={{width: 70,}}
+              <Picker style={{width: 80,}}
                     mode="dropdown"
                      selectedValue={this.state.pregnancydays}
                      onValueChange={(pregnday) => this.setState({pregnancydays: pregnday})}>
@@ -163,7 +163,7 @@ export default class BreedInformation extends Component<Props> {
 
         <View style={styles.buttoncopyright}>
               <View style={styles.buttonstyle}>
-                  <Button  title="Next" color="#009688"  onPress={() => this.props.navigation.navigate('BreedInformation1')}/>
+                  <Button  title="Next" color="#009688"  onPress={() => this.props.navigation.navigate('BreedInformation3')}/>
               </View>
               <Text style={styles.copyright}> Copyright @2018 Steelapp</Text>
         </View>
@@ -251,7 +251,7 @@ pregnancybottonline : {
 
 dayssinceinput : {
   height: 40,    
-  marginLeft:15,  
+  marginLeft:5,  
   borderBottomColor: 'lightgrey',  
   borderBottomWidth: 1,  
   fontSize: 12, 
@@ -300,7 +300,7 @@ buttonstyle : {
 
 copyright :{
   textAlign: 'center',
-  marginTop:80,
+  marginTop:85,
   marginBottom:10,
   fontSize: 12,
 }

@@ -18,9 +18,10 @@ import Registersire from    './src/containers/registration/registersire/Register
 import Cattlesummary from   './src/containers/registration/cattlesummary/Cattlesummary';
 import Activitylog from    './src/containers/registration/activitylog/Activitylog';
 
-import BreedInformation from    './src/containers/registration/registercattle/BreedInformation' ; 
-import BreedInformations from    './src/containers/registration/registercattle/BreedInformations';
-import BreedInformation1 from    './src/containers/registration/registercattle/BreedInformation1';
+import BreedInformation1 from    './src/containers/registration/registercattle/BreedInformation1' ; 
+import BreedInformation2 from    './src/containers/registration/registercattle/BreedInformation2';
+import BreedInformation3 from    './src/containers/registration/registercattle/BreedInformation3';
+import BreedInformation4 from    './src/containers/registration/registercattle/BreedInformation4';
 
 
 const RootStack = createStackNavigator(
@@ -66,25 +67,33 @@ const RootStack = createStackNavigator(
     },
 
     //
-    BreedInformation: {screen : BreedInformation,
-      navigationOptions: ({navigation}) => ({
-        title: 'Cattle Registration',
-        headerTintColor: 'white',
-        headerStyle: { backgroundColor: '#212121'},
-      })
-    },
-
-    BreedInformations: {screen : BreedInformations,
-      navigationOptions: ({navigation}) => ({
-        title: 'Cattle Registration',
-        headerTintColor: 'white',
-        headerStyle: { backgroundColor: '#212121'},
-      })
-    },
-
     BreedInformation1: {screen : BreedInformation1,
       navigationOptions: ({navigation}) => ({
         title: 'Cattle Registration',
+        headerTintColor: 'white',
+        headerStyle: { backgroundColor: '#212121'},
+      })
+    },
+
+    BreedInformation2: {screen : BreedInformation2,
+      navigationOptions: ({navigation}) => ({
+        title: 'Cattle Registration',
+        headerTintColor: 'white',
+        headerStyle: { backgroundColor: '#212121'},
+      })
+    },
+
+    BreedInformation3: {screen : BreedInformation3,
+      navigationOptions: ({navigation}) => ({
+        title: 'Cattle Registration',
+        headerTintColor: 'white',
+        headerStyle: { backgroundColor: '#212121'},
+      })
+    },
+
+    BreedInformation4: {screen : BreedInformation4,
+      navigationOptions: ({navigation}) => ({
+        title: 'Cattle Details',
         headerTintColor: 'white',
         headerStyle: { backgroundColor: '#212121'},
       })
