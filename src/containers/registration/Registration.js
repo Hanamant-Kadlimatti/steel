@@ -19,7 +19,7 @@ import Carousel from 'react-native-banner-carousel';
 
 
 
-const tintColor = 'white';
+const tintColor = '#fafafa';
 
 // const BannerWidth = Dimensions.get('window').width;
 const BannerHeight =   75;
@@ -46,14 +46,18 @@ const images = [
     render() {
       return (
         <View style={styles.container}>
+
+           <View style={styles.aftertabwidth}></View>
        
-       <SearchBar inputStyle={{ color: '#CCCCCC' }}
-            placeholder=" Search cattle"
-            lightTheme
-            inputStyle={styles.searchBarInput}
-            icon={{ color: tintColor, size: '52'}}
-          clearIcon={{name: 'search'}}
-          />
+          <View style={styles.searchcontainer}>
+              <SearchBar 
+                placeholder=" Search cattle"
+                lightTheme
+                inputStyle={styles.searchBarInput}
+                icon={{ color: tintColor, size: '52'}}
+              clearIcon={{name: 'search'}}
+              />
+          </View>
                {/* <Button title="Go to " onPress={() => this.props.navigation.navigate('Details')}></Button> */}
 
               <View >
@@ -122,13 +126,24 @@ const images = [
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      // justifyContent: 'center',
-      // alignItems: 'center',
-      backgroundColor:  '#f2f2f2'  //'#F5FCFF',
+      backgroundColor:  '#ffffff'  
+    },
+
+    aftertabwidth : {
+      height:14, 
+      backgroundColor:'#f2f2f2', 
+      borderTopWidth: 0.2, 
+      borderBottomWidth: 0.2, 
+      borderBottomColor: '#bbb', 
+      borderTopColor: '#bbb',
+    },
+
+    searchcontainer : {
+      marginTop: 15
     },
     searchBarInput: {
       color: tintColor,
-      backgroundColor: '#fff',
+      backgroundColor: '#fafafa',
       marginLeft: 10,
       marginRight: 10,
       borderWidth: 0.2,
