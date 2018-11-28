@@ -271,7 +271,7 @@ const tintColor= 'white';
 
             <View style={styles.homeimage}>
               <Image source={ require('../../../asset/images/home.png')}></Image>  
-              </View>  
+            </View>  
 
           </View>
        )
